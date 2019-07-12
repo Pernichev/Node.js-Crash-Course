@@ -19,4 +19,17 @@ fs.writeFile(path.join(__dirname, '/test', 'hello.txt'), 'Hello World', err => {
     });
 });
 
-//
+// Read file
+
+// fs.readFile(path.join(__dirname, '/test', 'hello.txt'), 'utf8', (err, data) => {
+//     if(err) throw err;
+//     console.log('Reading file...');
+//     console.log(data);
+// });
+
+// Rename file
+
+fs.rename(path.join(__dirname, '/test', 'hello.txt'), path.join(__dirname, '/test', 'world.txt', err => {
+    if(err) throw err;
+    console.log('File renamed');
+});
